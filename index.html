@@ -1,0 +1,73 @@
+<!-- ****************************
+Program Name: Todo App
+Start Date: 2 July 19
+End Date: 2 July 19
+Author: Ankur S Dutta
+Institute: WSA 
+******************************* -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" type="text/css" href="./css/theme1.css">
+    <link rel="stylesheet" type="text/css" href="./css/inputBox.css">
+</head>
+<body>
+    <h1>To-Do App</h1>
+
+    <div class="input_todo">
+        <form action="" name="input_todo" id="input_todo-form" onsubmit="addTodo(this)">
+            <p id=todo-id style="display: none"></p>
+            <input type="text" name="title" id="input_todo-title" placeholder="Enter Task">
+            <select name="category" id="input_todo-category">
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Work">Work</option>
+                <option value="Social">Social</option>
+            </select>
+            <select name="priority" id="input_todo-priority">
+                <option value="low">Low</option>
+                <option value="mid">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="submit" id="input_todo-submit" value="Submit">
+            <button id="update_todo" style="display: none" type="button">Update</button>
+            <button id="remove_todo" style="display: none" type="button" class="remove-btn">Remove</button>
+        </form>
+    </div>
+    <div class="todo-func">
+        <div>
+            <input type="text" id="input_todo-search" placeholder="Search">
+            <button id="display_todo-incomplete">Incomplete Todos</button>
+            <button id="display_todo-complete">Complete</button>
+            <button id="display_todo">Show All</button>
+        </div>
+    </div>
+
+    <div class="display_todo container" id="display">
+        <table id="todo_table" border="0">
+            <thead>    
+                <tr>
+                    <th>ID</th>
+                    <th>Tasks</th>
+                    <th>Category</th>
+                    <th>Priority</th>
+                    <th>Date Created</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+
+    <script src="./js/ID.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/app-functions.js"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
